@@ -1,0 +1,99 @@
+/* reset do CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* facilita o calculo das larguras e alturas incluindo bordas e padding */
+}
+body {
+    font-family: 'inter', sans-serif;
+    background-color: #0e0e10;
+    color: #fff;
+    line-height: 1.6;/* define a altura da linha */
+    overflow-x: hidden; /* evita o scroll horizontal desnecessario */
+}
+header{
+    padding: 1.5rem 3rem;/* um 1 ponto em medida em (re) equivale a 16px */
+    border-bottom: 1px solid #222; /* borda da parte inferior do elemento  */
+}
+nav{
+    display: flex;
+    justify-content: space-between;/* alinhamento horizontal */
+    align-items: center; /* alinhamento horizontal */
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;/* similar ao negrito  */
+    color: #fff;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.menu, li, a{
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.menu, li, a:hover{
+    color: #fff;
+}
+.hero { /* section com flexbox e responsividade */
+    display: flex;
+    flex-wrap: wrap;/* permite quebra de linhas em telas pequenas */
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero-content{
+    max-width: 500px;
+}
+.hero-content, h1{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    line-break: 1.2;
+}
+.hero-content, p{
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+.bnt{
+    padding: 0.75 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.primary{
+    background-color: white;
+    color: #0e0e10;
+}
+.primary:hover{
+    background-color: #dcdcdc;/* 1 dc: red / 2 dc: green / 3 blue */
+}
+.secondary{
+    background-color: transparent;
+    border: 1px solid #555;
+    color: #ccc;
+}
+.secondary:hover{
+    border-color: #888;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
