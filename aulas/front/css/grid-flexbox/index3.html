@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid blue;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            column-gap: 10px;
+            row-gap: 5px;
+            height: 100%;
+        }
+        li{
+            display: flex;
+            text-decoration: none;
+        }
+        img{
+            width: 20%;
+        }
+
+        .item {
+            display: flex;
+            border: 1px solid red;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item1 {
+            grid-column: 1 / 5;
+        }
+
+        .item2 {
+            grid-column: 1 / 3;
+            grid-row: 2/9;
+        }
+
+        .item3 {
+            grid-column: 3 / 5;
+            grid-row: 2/9;
+        }
+
+        .item4 {
+            grid-column: 1 / 5;
+            grid-row: 9 / 9;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">
+            <nav><ul>
+                <li>inicio</li>
+                <li>contatos</li>
+                <li>patrocinadores</li>
+            </ul></nav>
+        </div>
+        <div class="item item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur beatae ex,
+            architecto inventore neque magnam placeat, iste, praesentium saepe dicta accusantium harum accusamus aliquid
+            perferendis amet. At praesentium temporibus distinctio? <img
+                src="https://i.redd.it/did-anyone-notice-the-sonic-cd-opening-meme-in-murder-of-v0-o2j235yukm9c1.jpg?width=591&format=pjpg&auto=webp&s=3430aa37819e307828958dd1324d9bc1f23f43bf"
+                alt=""></div>
+        <div class="item item3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae aliquid,
+            saepe quam maxime eveniet adipisci ullam placeat voluptatum libero sed similique fugiat harum a culpa
+            officiis enim delectus impedit.
+            <img src="https://media.tenor.com/aQQT2lV_XcsAAAAe/mario.png" alt="">
+        </div>
+        <div class="item item4">D</div>
+    </div>
+</body>
+
+</html>
