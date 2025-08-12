@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let idade = Number(prompt("digite a sua idade"));
+        console.log(idade);
+        
+        if (idade >= 0 && idade <= 12) {
+            alert("criança");
+        } else if (idade >= 13 && idade <= 17) {
+            alert("adolecente");
+        } else if (idade >= 18 && idade <= 59) {
+            alert("adulto");
+        } else if (idade >= 60) {
+            alert("idoso");
+        } else {
+            alert("Olá! (idade inválida)");
+        }
+    </script>
+
+</body>
+
+</html>
