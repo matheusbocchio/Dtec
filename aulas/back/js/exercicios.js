@@ -3,7 +3,7 @@
 // ENTRE 12H E 17H -> BOA TARDE 
 // ENTRE 18H E 23H -> BOA NOITE 
 //MENSAGEM PADRÃO -> HORARIO INVALIDO 
-/*
+
 const hora = 12
 if (hora >= 0 && hora <= 11) {
     console.log("Bom Dia!")
@@ -14,7 +14,7 @@ if (hora >= 0 && hora <= 11) {
 } else {
     console.log("horario invalido")
 }
-*/
+
 
 
 

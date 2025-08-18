@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.item{
+    padding: 15px;
+    background-color: thistle;
+    border-style: dashed;
+}
+
+
+
+
+

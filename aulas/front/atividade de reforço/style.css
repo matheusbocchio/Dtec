@@ -1,0 +1,18 @@
+/* Quase lá: ajuste apenas se necessário */
+.container {
+    display: flex;
+    gap: 12px;
+}
+.item{
+    padding: 15px;
+    background-color:darkgray;
+    border-style: dashed;
+}
+
+
+
+
+
+
+
+
