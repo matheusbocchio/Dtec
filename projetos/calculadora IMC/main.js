@@ -37,3 +37,4 @@ resultado.innerHTML += `<p>${imc}</p>`;
 
 
 
+
