@@ -1,13 +1,30 @@
-const sim = document.querySelector("#novaTarefa").value;
+function adicionarTarefa(){
+    const input = document.getElementById("novaTarefa");
+    const texto = input.value.trim();
+    if(texto === ""){
+        return;
+    }/*ou if(texto === "") return;*/
 
-function adicionarTarefa() {
-    let listaDeTarefas = document.querySelector("#Lista");
-    let novoLI = document.createElement('li');
-    novoLI.textContent
-    listaDeTarefas.appendChild(novoLI);
+    const li = document.createElement("li");
+    const p = document.createElement("p");
+    p.textContent = texto;
+    p.className = "tarefa";
+    li.appendChild(p);
 
-    let elementoInput = document.getElementById('nova tarefa')
-     const valorDigitado = elementoInput.value
-    console.log(valorDigitado); // Isto mostrará o que o utilizador escreveu
-}
+    const btnRemover = document.createElement("button");
+    btnRemover.textContent = "remover";
+    btnRemover.className = "remove";
+    btnRemover.onclick = function() {
+        li.remove();
+    };
 
+    li.appendChild(btnRemover);
+
+    li.onclick = function(){
+        li.classList.toggle("feito")
+    }
+
+    document.getElementById("Lista").appendChild(li);
+
+    input.value ="";
+};
