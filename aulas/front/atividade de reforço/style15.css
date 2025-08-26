@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    height: 100vh;
+    gap: 12px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header"
+     "sidebar content"
+     "footer footer";
+}
+
+.header{
+    grid-area: header;
+}
+.aside{
+    grid-area: content;
+}
+.section{
+    grid-area: content;
+}
+.footer{
+    grid-area: footer;
+}
+.area{
+    background-color: thistle;
+}

@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    gap: 15px;
+    height: 90vh;
+    background-color:thistle;
+}
+.aside{
+    display: flex;
+    flex: 0 0 200px
+}
+.content{
+    flex: 1;
+    background-color: aqua;
+}
+    
+

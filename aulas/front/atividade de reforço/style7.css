@@ -1,14 +1,19 @@
 .container {
     display: flex;
+    height: 100vh;
     gap: 12px;
+    align-items: center;
     
 }
 .item{
     background-color: thistle;
     border: solid black;
     padding: 15px;
+    align-self: center;
 }
-
+.item3{
+    align-self: end;
+}
 
 
 
