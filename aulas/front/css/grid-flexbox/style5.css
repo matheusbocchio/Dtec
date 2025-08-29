@@ -1,0 +1,146 @@
+
+/* =========================================================
+   RESET BÁSICO (SIMPLIFICADO) + BASE GLOBAL
+   (Mantém intencionalmente algumas escolhas ruins de UX)
+   ========================================================= */
+* {
+    margin: 1px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0px;
+    padding: 0px;
+    background: #eee;
+    color: black;
+}
+
+/* Links com estilo "simples" para evidenciar UX ruim */
+a {
+    color: inherit;
+    text-decoration:dotted;
+}
+
+/* Listas “zeradas” */
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Imagens responsivas */
+img {
+    border-radius: 15px;
+    display: flex;
+    height: auto;
+    max-width: 100%;
+    justify-content:space-between;
+}
+
+/* =========================================================
+   HEADER / NAV (Problemas propositais: fontes pequenas, contraste)
+   ========================================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 4vh;
+    color: #ff385c;
+    /* cor ok */
+}
+
+header nav a {
+    margin: 3px;
+    font-size: 2vh;
+    text-decoration: none;
+    color: black;
+}
+
+/* =========================================================
+   HERO (texto pequeno, botão pequeno, contraste fraco)
+   ========================================================= */
+.hero {
+    background: #eee;
+    padding: 12px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 5vh;
+    color: black;
+}
+
+.search-btn {
+    background: #ff385c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+}
+
+/* =========================================================
+   LISTA / GRID (grade fixa e desbalanceada)
+   - Grid fixo com 5 colunas SEM responsividade
+   - Gaps e margens inconsistentes
+   ========================================================= */
+.lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: repeat(3, minmax(120px, 1fr));
+    margin: 10px;
+    gap: 7px;
+    /* espaçamento “mágico” inconsistente */
+}
+
+/* =========================================================
+   CARD (tipografia pequena e preço com baixo contraste)
+   ========================================================= */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 15px;
+    /* MUITO pequeno para leitura confortável */
+    background: #fff;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.preco {
+    color: black;
+    font-size: 3vh;
+  
+}
+
+/* =========================================================
+   BOTÃO DE RESERVA (área de toque pequena, sem feedback)
+   ========================================================= */
+.reserve {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 1vh 15vh;
+    margin-top: 2px;
+}
+
+/* =========================================================
+   FOOTER (contraste ruim, tipografia pequena)
+   ========================================================= */
+footer {
+    background: #aea7c0;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    padding: 5px;
+}

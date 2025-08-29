@@ -1,0 +1,47 @@
+* {
+    margin: 5px;
+    padding: 15px;
+}
+.card img{
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+.card {
+    transition: opacity .2s ease;
+
+}
+body{
+    background-color: #031525;
+}
+button{
+    border-radius: 25px;
+    background-color: #031525;
+    color: white;
+    border: solid gray;
+}
+div{
+    color: white;
+}
+.grid{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.hidden {
+    display: none !important;
+    opacity: 0;
+}
+h1{
+    font-size: 10vh;
+}
+p{
+    font-size: 3vh;
+}
+
+.pill[aria-pressed="true"] {
+    background: white;
+    color: #031525;
+    border-color: transparent;
+}
