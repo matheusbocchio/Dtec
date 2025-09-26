@@ -24,83 +24,80 @@ let usuarios = [
     { id: 5, nome: "José Carlos", idade: 35 },
 ]
 
-app.get('/usuarios', (require, response) => {
-    response.json(usuarios)
+app.get('/usuarios', (req, res) => {
+    res.json(usuarios)
 })
 
-app.get('/', (requeire, response) => {
-    response.send("TESTE")
+app.get('/', (req, res) => {
+    res.send("TESTE")
 })
 
-app.get('/usuarios/:id', (require, response) => {
-    const id = require.params.id;
+app.get('/usuarios/:id', (req, res) => {
+    const id = req.params.id;
     const usuario = usuarios.find(u => u.id == id);
 
     if (usuario) {
-        response.json(usuario)
+        res.json(usuario)
     } else {
-        response.status(404).json({ mensagem: "usuario não encontrado" })
+        res.status(404).json({ mensagem: "usuario não encontrado" })
     }
 
 })
 
-app.get('/usuarios/nome/:nome', (require, response) => {
-    const buscaNome = require.params.nome.toLocaleLowerCase()
-    const resultados = usuarios.filter(n => n.nome.toLocaleLowerCase().includes(buscaNome))
-y
+app.get('/usuarios/nome/:nome', (req, res) => {
+    const buscaNome = req.params.nome.toLowerCase();
+    const resultados = usuarios.filter(n => n.nome.toLowerCase().includes(buscaNome));
     if (resultados.length > 0) {
-        response.json(resultados)
+        res.json(resultados);
     } else {
-        response.status(404).json({ mensagem: "usuario não encontrado" })
+        res.status(404).json({ mensagem: "usuario não encontrado" });
     }
+});
 
-})
-
-app.get('/usuarios/:idade', (require, response) => {
-    const buscaIdade = Number(require.params.idade)
-    const resultados = usuarios.filter(n => n.idade === buscaIdade)
+app.get('/usuarios/:idade', (req, res) => {
+    const buscaIdade = Number(req.params.idade);
+    const resultados = usuarios.filter(n => n.idade === buscaIdade);
 
     if (resultados.length > 0) {
-        response.json(resultados)
+        res.json(resultados);
     } else {
-        response.status(404).json({ mensagem: "usuario não encontrado" })
+        res.status(404).json({ mensagem: "usuario não encontrado" });
     }
+});
 
-})
-
-app.delete('/usuarios/:id', (require, response) => {
-    const id = require.params.id
+app.delete('/usuarios/:id', (req, res) => {
+    const id = req.params.id;
     usuarios = usuarios.filter(u => u.id != id);
 
-    response.json({ mensagem: "usuario removido com sucesso" })
-})
-app.post('/usuarios', (require, response) => {
-    const ultimoId = usuarios.reduce((max, usuario) => Math.max(max, usuario.id), 0)
+    res.json({ mensagem: "usuario removido com sucesso" });
+});
+app.post('/usuarios', (req, res) => {
+    const ultimoId = usuarios.reduce((max, usuario) => Math.max(max, usuario.id), 0);
 
     const novoUsuario = {
         id: ultimoId + 1,
-        nome: require.body.nome,
-        idade: require.body.idade
-    }
-    usuarios.push(novoUsuario)
-    response.status(201).json(novoUsuario);
-})
+        nome: req.body.nome,
+        idade: req.body.idade
+    };
+    usuarios.push(novoUsuario);
+    res.status(201).json(novoUsuario);
+});
 
-app.put('/usuarios/:id', (require, response) => {
-    const id = require.params.id
-    const nome = require.body.nome
-    const idade = require.body.idade
+app.put('/usuarios/:id', (req, res) => {
+    const id = req.params.id;
+    const nome = req.body.nome;
+    const idade = req.body.idade;
 
-    const usuario = usuarios.find(u => u.id == id)
+    const usuario = usuarios.find(u => u.id == id);
 
     if (!usuario) {
-        return response.status(404).json({ mensagem: "Usuario Não Encontrado" })
+        return res.status(404).json({ mensagem: "Usuario Não Encontrado" });
     }
 
-    usuario.nome = nome || usuario.nome
-    usuario.idade = idade || usuario.idade
-    response.json(usuario)
-})
+    usuario.nome = nome || usuario.nome;
+    usuario.idade = idade || usuario.idade;
+    res.json(usuario);
+});
 
 
 //Inicia o servidor
